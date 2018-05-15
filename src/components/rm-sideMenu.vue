@@ -39,7 +39,7 @@
           methods:{
               newArrayCards(){
                   this.allCards = this.$cardService.allCards();
-                  this.auxCards = this.allCards.filter(c => c.cardTitle.toLowerCase().indexOf(this.filterCards.toLowerCase()) >= 0);
+                  this.auxCards = this.allCards.filter(c => c.cardTitle.toLowerCase().indexOf(this.filterCards.toLowerCase()) >= 0 || c.cardDescription.toLowerCase().indexOf(this.filterCards.toLowerCase())>= 0);
                   
                   this.$emit('cardFilter',this.auxCards);
               },
