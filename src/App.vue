@@ -8,7 +8,7 @@
     <div class='row'>
       <div class="col-md-auto sideMenu">
         <div v-if='isMenuOpen'>
-          <rmSideMenu :allCards='allCards' @all='all' />
+          <rmSideMenu @cardFilter='cardFilter'  />
           </div>
         </div>  
       <div class="col-8">
@@ -35,7 +35,7 @@ export default {
     return{
       isMenuOpen: true,
       allCards : [],
-      casa:[]
+      
     }
   },
   methods: {
@@ -48,10 +48,12 @@ export default {
         this.isMenuOpen = true;
       }
     },
-    all(index){
+    cardFilter(aux){
       
-      this.allCards = index;
-    }
+      this.allCards = aux;
+    },
+
+
 
   },
 

@@ -13,10 +13,10 @@
         <label>Filter by</label>
         <br/>
         <div class="radio">
-            <label><input type="radio"  name="optradio">FrontEnd</label>
+            <label><input type="radio" value='Frontend'  name="optradio" v-model='technology' disabled>FrontEnd</label>
             </div>
             <div class="radio">
-            <label><input type="radio" name="optradio">BackEnd</label>
+            <label><input type="radio" value='Backend' name="optradio" v-model='technology' disabled>BackEnd</label>
         </div>
             
     </div>
@@ -24,18 +24,12 @@
 <script>
     export default {
           name: 'rmSideMenu',
-          props:[
-              'allCards'
-          ],
           data(){
               return{
                   filterCards : '',
-                  auxCards:[]
+                  auxCards:[],
+                  technology :''
               }
-          },
-          computed:{
-            
-                
           },
           watch:{
             filterCards(){
@@ -47,8 +41,8 @@
                   this.allCards = this.$cardService.allCards();
                   this.auxCards = this.allCards.filter(c => c.cardTitle.toLowerCase().indexOf(this.filterCards.toLowerCase()) >= 0);
                   
-                  this.$emit('all',this.auxCards);
-              }
+                  this.$emit('cardFilter',this.auxCards);
+              },
           }  
     }
 </script>
@@ -57,5 +51,3 @@
         background: rgb(99, 191, 219);
     }
 </style>
-
-
