@@ -13,10 +13,10 @@
         <label>Filter by</label>
         <br/>
         <div class="radio">
-            <label><input type="radio" value='Frontend'  name="optradio" v-model='technology' disabled>FrontEnd</label>
+            <label><input type="radio" value='Frontend'  name="optradio" v-model='technology' >FrontEnd</label>
             </div>
             <div class="radio">
-            <label><input type="radio" value='Backend' name="optradio" v-model='technology' disabled>BackEnd</label>
+            <label><input type="radio" value='Backend' name="optradio" v-model='technology' >BackEnd</label>
         </div>
             
     </div>
@@ -34,6 +34,9 @@
           watch:{
             filterCards(){
                 this.newArrayCards();
+            },
+            technology(){
+                this.newArrayCardsTechnology();
             }
           },
           methods:{
@@ -43,6 +46,18 @@
                   
                   this.$emit('cardFilter',this.auxCards);
               },
+              newArrayCardsTechnology(){
+                 
+                  const allCards = this.$cardService.allCards();
+                  this.auxCards = [];                   
+                  allCards.forEach(element => {
+                      if(element.cardTechnology == this.technology){
+                          this.auxCards.push(element)
+                      }
+
+                  });
+                  this.$emit('cardTechnology',this.auxCards);
+              }
           }  
     }
 </script>

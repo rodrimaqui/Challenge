@@ -8,7 +8,7 @@
     <div class='row'>
       <div class="col-md-auto sideMenu">
         <div v-if='isMenuOpen'>
-          <rmSideMenu @cardFilter='cardFilter'  />
+          <rmSideMenu @cardFilter='cardFilter' @cardTechnology='cardTechnology' />
           </div>
         </div>  
       <div class="col-8">
@@ -52,6 +52,9 @@ export default {
       
       this.allCards = aux;
     },
+    cardTechnology(aux){
+      this.allCards = aux;
+    }
 
 
 
