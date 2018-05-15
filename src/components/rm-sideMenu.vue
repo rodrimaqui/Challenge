@@ -51,10 +51,9 @@
                   const allCards = this.$cardService.allCards();
                   this.auxCards = [];                   
                   allCards.forEach(element => {
-                      if(element.cardTechnology == this.technology){
+                      if(element.cardTechnology.find((c)=> c == this.technology)){
                           this.auxCards.push(element)
                       }
-
                   });
                   this.$emit('cardTechnology',this.auxCards);
               }
