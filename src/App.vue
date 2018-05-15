@@ -8,13 +8,11 @@
     <div class='row'>
       <div class="col-md-auto sideMenu">
         <div v-if='isMenuOpen'>
-          <div  transition="bounce">
-          <rmSideMenu/>
+          <rmSideMenu :allCards='allCards' @all='all' />
           </div>
         </div>  
-      </div>
       <div class="col-8">
-        <rmAllCards :allCards='allCards'/>
+         <rmCard  v-for="(card,key) in allCards" :card='card' :key='card.id'/>
       </div>
     </div>
   </div>
@@ -23,19 +21,21 @@
 <script>
   import rmHeader from './components/rm-header.vue';
   import rmSideMenu from './components/rm-sideMenu.vue';
-  import rmAllCards from './components/rm-allCards.vue';
+  import rmCard from './components/rm-card.vue';
 
 export default {
   name: 'App',
   components:{
     rmHeader,
     rmSideMenu,
-    rmAllCards
+    rmCard
+
   },
   data(){
     return{
       isMenuOpen: true,
-      allCards : []
+      allCards : [],
+      casa:[]
     }
   },
   methods: {
@@ -47,7 +47,12 @@ export default {
       else{
         this.isMenuOpen = true;
       }
+    },
+    all(index){
+      
+      this.allCards = index;
     }
+
   },
 
   mounted(){
@@ -57,35 +62,5 @@ export default {
 </script>
 
 <style>
-.bounce-transition {
-  display: inline-block; /* otherwise scale animation won't work */
-}
-.bounce-enter {
-  animation: bounce-in .5s;
-}
-.bounce-leave {
-  animation: bounce-out .5s;
-}
-@keyframes bounce-in {
-  0% {
-    transform: scale(0);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(1);
-  }
-}
-@keyframes bounce-out {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.5);
-  }
-  100% {
-    transform: scale(0);
-  }
-}
+
 </style>
