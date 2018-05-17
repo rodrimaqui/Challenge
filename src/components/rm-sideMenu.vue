@@ -48,14 +48,14 @@
           methods:{
               newArrayCards(){
                   
-                  this.allCards = this.$cardService.allCards();
+                  this.allCards = this.json; 
                   this.auxCards = this.allCards.filter(c => c.cardTitle.toLowerCase().indexOf(this.filterCards.toLowerCase()) >= 0 || c.cardDescription.toLowerCase().indexOf(this.filterCards.toLowerCase())>= 0);
                   
                   this.$emit('cardFilter',this.auxCards);
               },
               newArrayCardsTechnology(){
                  
-                  const allCards = this.$cardService.allCards();
+                  const allCards =this.json; 
                   this.auxCards = [];                   
                   allCards.forEach(element => {
                       if(element.cardTechnology.find((c)=> c == this.technology)){

@@ -22,6 +22,7 @@
   import rmHeader from './components/rm-header.vue';
   import rmSideMenu from './components/rm-sideMenu.vue';
   import rmCard from './components/rm-card.vue';
+  import json from '../cards.json';
 
 export default {
   name: 'App',
@@ -35,6 +36,7 @@ export default {
     return{
       isMenuOpen: true,
       allCards : [],
+      json
       
     }
   },
@@ -61,7 +63,7 @@ export default {
   },
 
   mounted(){
-    this.allCards = this.$cardService.allCards();
+    this.allCards = this.json;
   }
 }
 </script>

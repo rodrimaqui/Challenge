@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-
+//import rmOneCard from '../components/rm-oneCard.vue'
 
 Vue.use(Router)
 
@@ -11,6 +11,11 @@ export default new Router({
       path: '/',
       name: 'rmAllCards',
       component: rmAllCards
+    },*/
+    /*{
+      path:'/:id',
+      name: 'rmOneCard',
+      component: rmOneCard
     }*/
   ]
 })

@@ -1,5 +1,5 @@
 <template>
-    <div class='col-2'>
+    <div>
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" :src=card.cardImageUrl alt="Card image cap">
             <div class="card-body">
