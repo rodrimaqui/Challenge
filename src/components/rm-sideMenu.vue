@@ -50,8 +50,7 @@
                   
                   this.allCards = this.json; 
                   this.auxCards = this.allCards.filter(c => c.cardTitle.toLowerCase().indexOf(this.filterCards.toLowerCase()) >= 0 || c.cardDescription.toLowerCase().indexOf(this.filterCards.toLowerCase())>= 0);
-                  
-                  this.$emit('cardFilter',this.auxCards);
+                  this.$store.commit('saveCards',this.auxCards);
               },
               newArrayCardsTechnology(){
                  
@@ -62,7 +61,7 @@
                           this.auxCards.push(element)
                       }
                   });
-                  this.$emit('cardTechnology',this.auxCards);
+                  this.$store.commit('saveCards',this.auxCards);
               }
           }  
     }

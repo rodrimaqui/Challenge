@@ -8,12 +8,11 @@
     <div class='row'>
       <div class="col-md-auto sideMenu">
         <div v-if='isMenuOpen'>
-          <rmSideMenu @cardFilter='cardFilter' @cardTechnology='cardTechnology' />
+          <rmSideMenu />
           </div>
         </div>  
-      <div >
-         <rmCard  v-for="(card,key) in allCards" :card='card' :key='card.id'/>
-      </div>
+        <!--faltaria el div de column -->
+        <rmAllCards/>
     </div>
   </div>
 </template>
@@ -21,22 +20,20 @@
 <script>
   import rmHeader from './components/rm-header.vue';
   import rmSideMenu from './components/rm-sideMenu.vue';
-  import rmCard from './components/rm-card.vue';
-  import json from '../cards.json';
+  import rmAllCards from './components/rm-allCards.vue';
+  import json from '../cards.json'
+  
 
 export default {
   name: 'App',
   components:{
     rmHeader,
     rmSideMenu,
-    rmCard
-
+    rmAllCards  
   },
   data(){
     return{
-      isMenuOpen: true,
-      allCards : [],
-      json
+      isMenuOpen: true
       
     }
   },
@@ -49,21 +46,11 @@ export default {
       else{
         this.isMenuOpen = true;
       }
-    },
-    cardFilter(aux){
-      
-      this.allCards = aux;
-    },
-    cardTechnology(aux){
-      this.allCards = aux;
     }
-
-
-
   },
 
   mounted(){
-    this.allCards = this.json;
+   this.$store.commit('saveCards',json);
   }
 }
 </script>
