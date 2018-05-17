@@ -11,7 +11,7 @@
           <rmSideMenu @cardFilter='cardFilter' @cardTechnology='cardTechnology' />
           </div>
         </div>  
-      <div class="col-8">
+      <div >
          <rmCard  v-for="(card,key) in allCards" :card='card' :key='card.id'/>
       </div>
     </div>

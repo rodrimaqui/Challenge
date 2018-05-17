@@ -1,7 +1,7 @@
 <template>
-    <div class='navbar navbar-dark bg-primary'>
+    <div class='background2 '>
         <button>
-            <img src="../../avalith.png" alt="logotype of Avalith" height="42" width="42" @click="changeState">
+            <img src="../../avalith.png" alt="logotype of Avalith" height="39" width="35" @click="changeState">
         </button>
     </div>
 </template>
@@ -15,11 +15,20 @@
         },
         methods:{
             changeState(){
+                
                 this.$emit('changeState');
             }
         }
     }
 </script>
 <style>
-
+.background2 {
+  width: 1518px;
+  height: 60px;
+  background-color: #020202;
+}
+button{
+    margin-top: 5px;
+    margin-left: 10px
+}
 </style>
