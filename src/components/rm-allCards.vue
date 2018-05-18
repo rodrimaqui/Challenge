@@ -3,15 +3,13 @@
         <div class='row'>
             <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label> 
         </div>
-        <div class="row">
-      
+        <div class="row">      
             <rmCard  v-for="(card,key) in getCards" :card='card' :key='card.id'/>
       </div>
     </div>
 </template>
 <script>
     import rmCard from './rm-card.vue';
-    import json from '../../cards.json';
 
     export default{
         name: 'rmAllCards',
@@ -21,8 +19,7 @@
         },
         data(){
             return{
-                json
-               
+
             }
         },
         computed:{
@@ -50,5 +47,4 @@
   color: #020202;
   color: var(--black-two);
 }
-
 </style>

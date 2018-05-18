@@ -1,5 +1,5 @@
 <template>
-    <div class='background2 '>
+    <div class='background2'>
         <button>
             <img src="../../avalith.png" alt="logotype of Avalith" height="39" width="35" @click="changeState">
         </button>

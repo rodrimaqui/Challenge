@@ -1,15 +1,17 @@
 <template>
-    <div>
+    <div>        
         <div class='row'>
-            <div class='Layer-3'>
-                <router-link v-bind:to="'/'">
-                    <label class='Go-back'>Go Back</label>
-                </router-link>
-            </div>
-            <div v-if='aux'>
-                <img :src=aux.cardPost.postImageUrl alt="Smiley face" class='aa'>
-                <br/>
-                <br/>
+            <div class='col-12'>
+                <div class='Layer-3'>
+                    <router-link v-bind:to="'/'">
+                        <label class='Go-back'>Go Back</label>
+                    </router-link>
+                </div>
+                <div v-if='aux'>
+                    <img :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle"  height="500">
+                    <br/>
+                    <br/>
+                </div>
             </div>
         </div>
         <div v-if='aux' class='row'>
@@ -21,11 +23,9 @@
                 <div class='col-4'>
                     <label> {{aux.cardPost.postTitle}}</label>
                     <br/>
-                    <br/>
-                    
-                   <chartjs-doughnut :width="250" :height="250" :datasets='datasets' :option='option' ></chartjs-doughnut>
-                   
-                </div>        
+                    <br/>                    
+                   <chartjs-doughnut :width="250" :height="250" :datasets='datasets' :option='option' ></chartjs-doughnut>                   
+                </div>       
         </div>
     </div>
 </template>
@@ -46,11 +46,9 @@
                 ],
                 option:{
                     title:{
-                        display:false,
-                        
+                        display:false,                        
                     }
                 }
-
                 
             }
         },
@@ -75,11 +73,7 @@
         },
         mounted(){
             this.findCard(this.getId);           
-            this.$store.commit('statusSearch',false);
-            
-        },
-        created(){
-            
+            this.$store.commit('statusSearch',false);            
         }
     }
 </script>
@@ -101,8 +95,12 @@
   letter-spacing: 0.2px;  
   color: #ffffff;
 }
-.aa{
-    background-size: cover;
-}
+
+img{
+     max-width: 100%;
+
+   }
+
+
 
 </style>

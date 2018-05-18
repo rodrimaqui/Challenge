@@ -41,8 +41,7 @@ export default {
   },
   data(){
     return{
-      isMenuOpen: true
-      
+      isMenuOpen: true      
     }
   },
   methods: {
@@ -59,6 +58,7 @@ export default {
 
   mounted(){
    this.$store.commit('saveCards',json);
+   
   }
 }
 </script>

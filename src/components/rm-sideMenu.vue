@@ -1,6 +1,6 @@
 <template>
     <div class='background'>
-        <div class='aa'>
+        <div class='rmInformation'>
         <label>Rodrigo Maquirriain</label>
         <br/>
         <label>35333496</label>
@@ -79,7 +79,7 @@
   background-color: #020202;
   color: white;
 }
-.aa{
+.rmInformation{
     background-color: rgb(61, 57, 57);
 }
 
