@@ -5,6 +5,15 @@ import App from './App'
 import router from './router'
 import store from './store/store'
 
+//Chart
+import "chart.js"
+import "hchs-vue-charts"
+Vue.use(window.VueCharts);
+
+//Axio
+
+//Vue.prototype.$http = axios;
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

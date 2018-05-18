@@ -20,18 +20,38 @@
                 </div>
                 <div class='col-4'>
                     <label> {{aux.cardPost.postTitle}}</label>
+                    <br/>
+                    <br/>
+                    
+                   <chartjs-doughnut :width="250" :height="250" :datasets='datasets' :option='option' ></chartjs-doughnut>
+                   
                 </div>        
         </div>
     </div>
 </template>
 <script>
+
     export default{
         name: 'rmOneCArd',
 
         data(){
             return{
                 aux: '',
-                id : 0
+                id : 0,
+                datasets:[
+                    {
+                        data:[],
+                        backgroundColor:['red','yellow','purple']
+                    }
+                ],
+                option:{
+                    title:{
+                        display:false,
+                        
+                    }
+                }
+
+                
             }
         },
         computed:{
@@ -43,8 +63,10 @@
             findCard(id){
                 const aux = this.$store.state.cards;
                 this.aux = aux.find(c => c.cardId == id);
-            }          
-       
+                if(this.aux != undefined){
+                    this.datasets[0].data = this.aux.cardGraph.data;
+                }
+            } 
         },
         watch:{
             id(){
@@ -52,8 +74,11 @@
             }
         },
         mounted(){
-            this.findCard(this.getId);
+            this.findCard(this.getId);           
             this.$store.commit('statusSearch',false);
+            
+        },
+        created(){
             
         }
     }
@@ -79,4 +104,5 @@
 .aa{
     background-size: cover;
 }
+
 </style>

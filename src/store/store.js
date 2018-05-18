@@ -8,7 +8,7 @@ export default new Vuex.Store({
 
     state:{
       cards: [],
-      active: true
+      active: ''
 
     },
     mutations:{
