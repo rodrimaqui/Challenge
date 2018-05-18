@@ -1,12 +1,27 @@
 <template>
     <div>
-        <div class='Layer-3'>
-            <router-link v-bind:to="'/'">
-                <label class='Go-back'>Go Back</label>
-            </router-link>
+        <div class='row'>
+            <div class='Layer-3'>
+                <router-link v-bind:to="'/'">
+                    <label class='Go-back'>Go Back</label>
+                </router-link>
+            </div>
+            <div v-if='aux'>
+                <img :src=aux.cardPost.postImageUrl alt="Smiley face" class='aa'>
+                <br/>
+                <br/>
+            </div>
         </div>
-        <img :src=aux.cardPost.postImageUrl alt="Smiley face" class='aa'>
-        
+        <div v-if='aux' class='row'>
+                <div class='col-8'>
+                    <label>
+                        {{aux.cardPost.postDescription}}
+                    </label>
+                </div>
+                <div class='col-4'>
+                    <label> {{aux.cardPost.postTitle}}</label>
+                </div>        
+        </div>
     </div>
 </template>
 <script>
@@ -28,14 +43,15 @@
             findCard(id){
                 const aux = this.$store.state.cards;
                 this.aux = aux.find(c => c.cardId == id);
-            }
+            }          
+       
         },
         watch:{
             id(){
                 this.findCard(this.id);
             }
         },
-        created(){
+        mounted(){
             this.findCard(this.getId);
             this.$store.commit('statusSearch',false);
             

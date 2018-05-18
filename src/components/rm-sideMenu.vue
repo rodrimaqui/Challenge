@@ -9,7 +9,7 @@
         </div>
         <br/>
         <br/>
-        <div v-if='satusA'>
+        <div v-if='status'>
             <input type='text' class="form-control" placeholder="Search in cards" v-model="filterCards"/>
             <br/>
             <br/>
@@ -38,7 +38,7 @@
               }
           },
           computed:{
-              satusA(){
+              status(){
                   return this.$store.state.active;
               }
           },

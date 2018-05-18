@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div >
+        <div class='row'>
          <rmCard  v-for="(card,key) in getCards" :card='card' :key='card.id'/>
       </div>
     </div>

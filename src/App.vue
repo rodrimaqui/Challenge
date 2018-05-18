@@ -11,8 +11,10 @@
           <rmSideMenu />
           </div>
         </div>  
-        <!--faltaria el div de column -->
-        <router-view/>
+        
+        <div class='col-8'>
+          <router-view/>
+        </div>
     </div>
   </div>
 </template>
