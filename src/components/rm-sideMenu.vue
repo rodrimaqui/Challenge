@@ -70,7 +70,7 @@
 
 .background {
   width: 300px;
-  height: 708px;
+  height: 1743px;
   background-color: #020202;
   color: white;
 }

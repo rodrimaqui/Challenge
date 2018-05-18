@@ -12,7 +12,7 @@
           </div>
         </div>  
         <!--faltaria el div de column -->
-        <rmAllCards/>
+        <router-view/>
     </div>
   </div>
 </template>

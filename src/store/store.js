@@ -7,13 +7,8 @@ Vue.use(Vuex)
 export default new Vuex.Store({
 
     state:{
-      cards: []
-    },
-    getters:{
+      cards: [],
 
-        getCards: (state,getters) =>{
-            return state.cards;
-        }
     },
     mutations:{
 

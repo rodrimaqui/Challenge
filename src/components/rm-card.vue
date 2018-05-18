@@ -1,5 +1,6 @@
 <template>
     <div>
+       <router-link v-bind:to="'/'+card.cardId">
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" :src=card.cardImageUrl alt="Card image cap">
             <div class="card-body">
@@ -7,6 +8,7 @@
                 <p class="card-text">{{card.cardDescription}}</p>
             </div>
         </div>
+       </router-link>
     </div>
 </template>
 <script>
@@ -24,4 +26,7 @@ export default {
     }
 }
 </script>
+<style>
+
+</style>
 
