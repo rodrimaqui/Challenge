@@ -5,6 +5,7 @@
                 <label class='Go-back'>Go Back</label>
             </router-link>
         </div>
+        <img :src=aux.cardPost.postImageUrl alt="Smiley face" class='aa'>
         
     </div>
 </template>
@@ -26,7 +27,6 @@
         methods:{
             findCard(id){
                 const aux = this.$store.state.cards;
-                console.log(aux)
                 this.aux = aux.find(c => c.cardId == id);
             }
         },
@@ -35,8 +35,9 @@
                 this.findCard(this.id);
             }
         },
-        mounted(){
+        created(){
             this.findCard(this.getId);
+            this.$store.commit('statusSearch',false);
             
         }
     }
@@ -58,5 +59,8 @@
   font-stretch: normal;
   letter-spacing: 0.2px;  
   color: #ffffff;
+}
+.aa{
+    background-size: cover;
 }
 </style>

@@ -9,18 +9,19 @@
         </div>
         <br/>
         <br/>
-        <input type='text' class="form-control" placeholder="Search in cards" v-model="filterCards"/>
-        <br/>
-        <br/>
-        <label>Filter by</label>
-        <br/>
-        <div >
-            <label><input type="radio" value='Frontend'  name="optradio" v-model='technology' >FrontEnd</label>
-            </div>
+        <div v-if='satusA'>
+            <input type='text' class="form-control" placeholder="Search in cards" v-model="filterCards"/>
+            <br/>
+            <br/>
+            <label>Filter by</label>
+            <br/>
             <div >
-            <label><input type="radio" value='Backend' name="optradio" v-model='technology' >BackEnd</label>
-        </div>
-            
+                <label><input type="radio" value='Frontend'  name="optradio" v-model='technology' >FrontEnd</label>
+                </div>
+                <div >
+                <label><input type="radio" value='Backend' name="optradio" v-model='technology' >BackEnd</label>
+            </div>
+        </div> 
     </div>
 </template>
 <script>
@@ -33,8 +34,12 @@
                   filterCards : '',
                   auxCards:[],
                   technology :'',
-                  json
-
+                  json,
+              }
+          },
+          computed:{
+              satusA(){
+                  return this.$store.state.active;
               }
           },
           watch:{

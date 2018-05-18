@@ -23,7 +23,7 @@
 </script>
 <style>
 .background2 {
-  width: 1905px;
+  width: 100%;
   height: 60px;
   background-color: #020202;
 }

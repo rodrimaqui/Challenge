@@ -8,12 +8,16 @@ export default new Vuex.Store({
 
     state:{
       cards: [],
+      active: true
 
     },
     mutations:{
 
         saveCards(state,cardsArray){
             state.cards = cardsArray;
+        },
+        statusSearch(state,active){
+            state.active = active;
         }
     }
 });

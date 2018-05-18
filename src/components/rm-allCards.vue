@@ -25,6 +25,9 @@
              getCards(){
                  return this.$store.state.cards;
              }
+        },
+        mounted(){            
+             this.$store.commit('statusSearch',true);
         }
     }
 </script>
