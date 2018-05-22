@@ -1,23 +1,30 @@
 <template>
-  <div class='noScrollBar'>
+  <div class='noScrollBar backgroundAllCards'>
     <header>
       <div>
         <rmHeader @changeState='changeState'/>
       </div>
     </header>
-    <div class='row'>
-      <div class="col-3-auto ">
-        <transition name="slide-fade">
-        <div v-if='isMenuOpen'>          
-          <rmSideMenu />          
-          </div>
-          </transition>
-        </div> 
-        <div class='col-8 sizeRow'>
-          <transition name="slide-fade">
-          <router-view/>
+    <div class="conteiner">
+      <div class="row">
+        <div class="col-3-auto ">
+            <transition name="slide-fade">
+            <div v-if='isMenuOpen'>
+              <rmSideMenu />          
+            </div>
           </transition>
         </div>
+        <div v-if='isMenuOpen' class="col-9 sizeRow">
+             <transition name="slide-fade">
+             <router-view/>
+          </transition>
+        </div>
+        <div v-else class="col-12 sizeRow">
+          <transition name='slide-fade'>
+            <router-view/>
+          </transition>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -67,10 +74,16 @@ export default {
 
 .sizeRow{
     height: calc(100vh - 60px);
+    
     overflow-y: scroll;
 }
 .noScrollBar{
   overflow-y: hidden;
   overflow-x: hidden;
 }
+
+.backgroundAllCards{
+    background: rgba(241, 229, 229, 0.884);
+}
+
 </style>

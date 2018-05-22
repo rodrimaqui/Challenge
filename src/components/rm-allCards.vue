@@ -1,13 +1,15 @@
 <template>
-    <div class="backgroundAllCards">
-        <div class='row'>
-            <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label> 
+    <div>
+        <div class='row aa'>
+            <div class='col-12'>
+                <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label> 
+            </div>
         </div>
         <div class="row">
             <div v-for="(card,key) in getCards"  :key='card.id'>      
-            <rmCard class='aaa'  :card='card'/>
+                <rmCard class='pad' :card='card'/>
+            </div>
         </div>
-      </div>
     </div>
 </template>
 <script>
@@ -49,13 +51,13 @@
   color: #020202;
   color: var(--black-two);
 }
- .aaa{
+ .pad{
      margin-right: 15px;
     
      margin-top: 15px;
  }
-.backgroundAllCards{
-    background: rgba(241, 229, 229, 0.884);
+.aa{
+    width: 1022px;
 }
 
 </style>
