@@ -1,22 +1,19 @@
 <template>
-  <div>
+  <div class='noScrollBar'>
     <header>
       <div>
         <rmHeader @changeState='changeState'/>
       </div>
     </header>
     <div class='row'>
-      <div class="col-md-auto sideMenu">
-         <transition name="slide-fade">
-        <div v-if='isMenuOpen'>
-          
-          <rmSideMenu />
-          
+      <div class="col-3-auto ">
+        <transition name="slide-fade">
+        <div v-if='isMenuOpen'>          
+          <rmSideMenu />          
           </div>
           </transition>
-        </div>  
-        
-        <div class='col-8'>
+        </div> 
+        <div class='col-8 sizeRow'>
           <transition name="slide-fade">
           <router-view/>
           </transition>
@@ -30,7 +27,6 @@
   import rmSideMenu from './components/rm-sideMenu.vue';
   import rmAllCards from './components/rm-allCards.vue';
   import json from '../cards.json'
-  
 
 export default {
   name: 'App',
@@ -46,19 +42,12 @@ export default {
   },
   methods: {
     changeState(){
-      if(this.isMenuOpen)
-      {
-        this.isMenuOpen = false;
-      }
-      else{
-        this.isMenuOpen = true;
-      }
+      this.isMenuOpen = !this.isMenuOpen;
     }
   },
 
   mounted(){
-   this.$store.commit('saveCards',json);
-   
+   this.$store.commit('saveCards',json);   
   }
 }
 </script>
@@ -74,5 +63,14 @@ export default {
 /* .slide-fade-leave-active below version 2.1.8 */ {
   transform: translateX(10px);
   opacity: 0;
+}
+
+.sizeRow{
+    height: calc(100vh - 60px);
+    overflow-y: scroll;
+}
+.noScrollBar{
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 </style>

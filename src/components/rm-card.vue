@@ -1,7 +1,7 @@
 <template>
-    <div>
+    <div class='pad-Card'>
        <router-link v-bind:to="'/'+card.cardId">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 325px;">
             <img class="card-img-top" :src=card.cardImageUrl alt="Card image">
             <div class="card-body">
                 <h5 class="card-title">{{card.cardTitle}}</h5>
@@ -27,6 +27,8 @@ export default {
 }
 </script>
 <style>
-
+.pad-Card{
+    padding-left: 6%;
+}
 </style>
 

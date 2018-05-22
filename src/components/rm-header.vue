@@ -1,11 +1,10 @@
 <template>
     <div class='background2'>
-        <button>
-            <img src="../../avalith.png" alt="logotype of Avalith" height="39" width="35" @click="changeState">
-        </button>
+        <img src="../../avalith.png" alt="logotype of Avalith" height="39" width="35" @click="changeState">
     </div>
 </template>
 <script>
+    
     export default {
         name: 'rmHeader',
         data(){
@@ -26,6 +25,8 @@
   width: 100%;
   height: 60px;
   background-color: #020202;
+  padding-left: 30px;
+  padding-top: 10px;
 }
 button{
     margin-top: 5px;

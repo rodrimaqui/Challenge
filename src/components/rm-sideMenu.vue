@@ -72,10 +72,9 @@
     }
 </script>
 <style>
-
 .background {
   width: 300px;
-  height: 1743px;
+  height: calc(100vh - 60px);
   background-color: #020202;
   color: white;
 }
