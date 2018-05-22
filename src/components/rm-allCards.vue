@@ -6,8 +6,10 @@
             </div>
         </div>
         <div class="row">
+            <div class="card-columns">
             <div v-for="(card,key) in getCards"  :key='card.id'>      
                 <rmCard class='pad' :card='card'/>
+            </div>
             </div>
         </div>
     </div>
