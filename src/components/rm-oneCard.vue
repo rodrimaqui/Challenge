@@ -77,13 +77,13 @@
 </script>
 <style>
 .Layer-3 {
-  width: 109px;
+  width: 120px;
   height: 36px;
   background-color: #020202;
   margin-top: 10px;
 }
 .Go-back {
-  width: 65px;
+  width: 120px;
   height: 14px;
   font-family: Roboto;
   font-size: 18px;
