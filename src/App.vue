@@ -5,7 +5,7 @@
         <rmHeader @changeState='changeState'/>
       </div>
     </header>
-    <div class="conteiner">
+    <div class="conteiner-fluid">
       <div class="row">
         <div class="col-3-auto ">
             <transition name="slide-fade">
@@ -19,11 +19,12 @@
              <router-view/>
           </transition>
         </div>
-        <div v-else class="col-12 sizeRow">
+        <div v-else class="col-12  sizeRow">
           <transition name='slide-fade'>
             <router-view/>
           </transition>
         </div>
+        
       </div>
     </div>
   </div>

@@ -1,15 +1,11 @@
 <template>
     <div>
-        <div class='row aa'>
-            <div class='col-12'>
-                <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label> 
-            </div>
+        <div class='col-12'>
+            <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label> 
         </div>
-        <div class="row">
-            <div class="card-columns">
+        <div class="card-columns">
             <div v-for="(card,key) in getCards"  :key='card.id'>      
-                <rmCard class='pad' :card='card'/>
-            </div>
+                <rmCard  :card='card'/>
             </div>
         </div>
     </div>
