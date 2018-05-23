@@ -1,8 +1,6 @@
 <template>
     <div>
-        <div class='col-12'>
-            <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label> 
-        </div>
+        <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label>
         <div class="card-columns">
             <div v-for="(card,key) in getCards"  :key='card.id'>      
                 <rmCard  :card='card'/>
