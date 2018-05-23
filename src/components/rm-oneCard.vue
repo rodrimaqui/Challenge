@@ -71,27 +71,31 @@
         },
         mounted(){
             this.findCard(this.getId);           
-            this.$store.commit('statusSearch',false);            
+            this.$store.commit('statusSearch',false);           
         }
     }
 </script>
 <style>
 .Layer-3 {
-  width: 120px;
-  height: 36px;
-  background-color: #020202;
+  width: 1200px;
+  height: 200px;
+  /* background-color: #020202; */
   margin-top: 10px;
 }
 .Go-back {
-  width: 120px;
-  height: 14px;
-  font-family: Roboto;
-  font-size: 18px;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: 0.2px;  
-  color: #ffffff;
+    margin-left: 0%;
+    width: 109px;
+    height: 36px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: 0.2px;  
+    color: #ffffff;
+    background-color:#020202;
+    /* padding-left: 2%;
+    padding-top:1%; */
 }
 
 img{

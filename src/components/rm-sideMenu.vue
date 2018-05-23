@@ -1,25 +1,25 @@
 <template>
     <div class='background'>
         <div class='rmInformation'>
-        <label>Rodrigo Maquirriain</label>
+        <label class='name'>Rodrigo Maquirriain</label>
         <br/>
-        <label>35333496</label>
+        <label class='dni' >35333496</label>
         <br/>
-        <label>27 Years old</label>
+        <label class='year' >27 Years old</label>
         </div>
         <br/>
         <br/>
         <div v-if='status'>
-            <input type='text' class="form-control" placeholder="Search in cards" v-model="filterCards"/>
+            <input type='text' class="textBox" placeholder="Search in cards" v-model="filterCards"/>
             <br/>
             <br/>
-            <label>Filter by</label>
+            <label class='filter-by'>Filter by</label>
             <br/>
-            <div >
-                <label><input type="radio" value='Frontend'  name="optradio" v-model='technology' >FrontEnd</label>
-                </div>
-                <div >
-                <label><input type="radio" value='Backend' name="optradio" v-model='technology' >BackEnd</label>
+            <div>
+                <label class='technology'><input type="radio" value='Frontend'  name="optradio" v-model='technology' >FrontEnd</label>
+            </div>
+            <div>
+                <label class='technology'><input type="radio" value='Backend' name="optradio" v-model='technology' >BackEnd</label>
             </div>
         </div> 
     </div>
@@ -81,9 +81,112 @@
     background-color: rgb(61, 57, 57);
 }
 
-label{
+.name{
     margin-left: 30px;
     margin-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    width: 116px;
+    height: 17px;
     font-family: Roboto;
+    font-size: 24px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #ffffff;
 }
+
+.dni{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 132px;
+    height: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #ffffff;
+}
+.year{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 121px;
+    height: 13px;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.filter-by{
+    margin-left: 30px;
+    margin-top: 10px;
+    width: 100px;
+    height: 18px;
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #f8f8f8;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.textBox{ 
+    border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #ffffff;
+    background-color: #020202;
+    margin-left:31px; 
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    width: 70%;
+}
+
+.textBox:focus{
+   border-top:none;
+    border-left: none;
+    border-right: none;
+    border-bottom-color: #ffffff;
+    background-color: #020202;
+    margin-left:31px; 
+    color: #ffffff;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    width: 70%;
+    outline:0px;    
+}
+
+label{
+    margin-left: 31px;
+    margin-top: 10px;
+}
+
+.technology{
+    margin-left: 31px;
+    width: 30%;
+    height: 14px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #f8f8f8;
+}
+
 </style>
