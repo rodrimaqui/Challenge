@@ -73,7 +73,6 @@
 </script>
 <style>
 .background {
-  /* width: 390.75px; */
   height: calc(100vh - 60px);
   background-color: #020202;
   color: white;

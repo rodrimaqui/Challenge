@@ -1,17 +1,15 @@
 <template>
     <div>        
         <div class='row'>
-            <div class='col-12'>
-                <div class='Layer-3'>
-                    <router-link v-bind:to="'/'">
-                        <label class='Go-back'>Go Back</label>
-                    </router-link>
-                </div>
-                <div v-if='aux'>
-                    <img :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle"  height="500">
-                    <br/>
-                    <br/>
-                </div>
+            <div class='Layer-3'>
+                <router-link v-bind:to="'/'">
+                    <label class='Go-back'>Go Back</label>
+                </router-link>
+            </div>
+            <div v-if='aux'>
+                <img :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle" width="1200"  height="200">
+                <br/>
+                <br/>
             </div>
         </div>
         <div v-if='aux' class='row'>
@@ -98,7 +96,6 @@
 
 img{
      max-width: 100%;
-
    }
 
 
