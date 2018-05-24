@@ -1,17 +1,16 @@
 <template>
     <div>        
         <div class='row'>
-            <div class='Layer-3'>
-                <router-link v-bind:to="'/'">
-                    <label class='Go-back'>Go Back</label>
-                </router-link>
+            <div class="col-12">
+                <div v-if='aux'>
+                    <div v-bind:style="{ 'background-image': 'url(' + aux.cardPost.postImageUrl + ')' ,'width':'100%'  ,'height':'200px'}">
+                        <router-link v-bind:to="'/'">
+                            <label class='Go-back' >Go Back</label>
+                        </router-link>
+                    </div>
+                </div>
             </div>
-            <div v-if='aux'>
-                <img :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle" width="1200"  height="200">
-                <br/>
-                <br/>
-            </div>
-        </div>
+        </div> 
         <div v-if='aux' class='row'>
                 <div class='col-8'>
                     <label>
@@ -77,10 +76,7 @@
 </script>
 <style>
 .Layer-3 {
-  width: 1200px;
-  height: 200px;
-  /* background-color: #020202; */
-  margin-top: 10px;
+
 }
 .Go-back {
     margin-left: 0%;

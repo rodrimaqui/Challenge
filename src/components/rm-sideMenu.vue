@@ -103,9 +103,8 @@
     left: 17px;
 }
 
-.rmRadio input[type='radio']:checked + label:before{    
+.rmRadio input[type='radio']:checked + label:before{
     background-color: #ffffff;
-
 }
 .background {
   height: calc(100vh - 60px);
