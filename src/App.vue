@@ -7,7 +7,7 @@
     </header>
     <div class="conteiner-fluid">
       <div class="row">
-        <div class="col-xl-3 col-lg-2 col-md-3 col-sm-3">
+        <div class="col-xl-3 col-lg-2 col-md-3 col-sm-3 p-0 m-0">
             <transition name="slide-fade">
             <div v-if='isMenuOpen'>
               <rmSideMenu />          

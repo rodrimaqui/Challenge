@@ -28,8 +28,4 @@
   padding-left: 30px;
   padding-top: 10px;
 }
-button{
-    margin-top: 5px;
-    margin-left: 10px
-}
 </style>

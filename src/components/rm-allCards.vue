@@ -47,13 +47,4 @@
   color: #020202;
   color: var(--black-two);
 }
- .pad{
-     margin-right: 15px;
-    
-     margin-top: 15px;
- }
-.aa{
-    width: 1022px;
-}
-
 </style>

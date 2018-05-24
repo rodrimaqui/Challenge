@@ -1,5 +1,5 @@
 <template>
-    <div class='pad-Card'>
+    <div>
        <router-link class='text' v-bind:to="'/'+card.cardId">
         <div class="card">
             <img class="card-img-top" :src=card.cardImageUrl alt="Card image">
@@ -26,9 +26,6 @@ export default {
 }
 </script>
 <style>
-.pad-Card{
-    padding-left: 6%;
-}
 .text{    
     font-family: 'roboto';
     font-size: 18px;
