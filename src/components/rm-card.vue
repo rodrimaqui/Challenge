@@ -1,11 +1,10 @@
 <template>
     <div class='pad-Card'>
-       <router-link v-bind:to="'/'+card.cardId">
+       <router-link class='text' v-bind:to="'/'+card.cardId">
         <div class="card">
             <img class="card-img-top" :src=card.cardImageUrl alt="Card image">
             <div class="card-body">
-                <h5 class="card-title">{{card.cardTitle}}</h5>
-                <p class="card-text">{{card.cardDescription}}</p>
+                <p class="card-text text">{{card.cardDescription}}</p>
             </div>
         </div>
        </router-link>
@@ -29,6 +28,18 @@ export default {
 <style>
 .pad-Card{
     padding-left: 6%;
+}
+.text{    
+    font-family: 'roboto';
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #313131;
+    color: var(--black);
 }
 </style>
 

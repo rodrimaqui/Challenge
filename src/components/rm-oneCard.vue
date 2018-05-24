@@ -3,11 +3,6 @@
         <div class='row'>
             <div class="col-12">
                 <div v-if='aux'>
-                    <!-- boton absolute img relative -->
-                    <!-- <div v-bind:style="{ 'background-image': 'url(' + aux.cardPost.postImageUrl + ')' ,'width':'100%'  ,'height':'200px'}"> -->
-                        
-                    <!-- </div> -->
-
                     <img class='img' :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle" width="1200"  height="200">
                     <router-link v-bind:to="'/'">
                             <label class='Go-back' >Go Back</label>
@@ -48,8 +43,7 @@
                     title:{
                         display:false,                        
                     }
-                }
-                
+                }                
             }
         },
         computed:{
@@ -78,9 +72,6 @@
     }
 </script>
 <style>
-.Layer-3 {
-
-}
 .Go-back {
     margin-left: 0%;
     width: 109px;
@@ -96,10 +87,6 @@
     position: absolute;
     top:0%;
 }
-
-img{
-     max-width: 100%;
-   }
 .img{
     position: relative;
 }

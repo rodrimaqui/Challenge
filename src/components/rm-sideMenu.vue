@@ -116,8 +116,8 @@
 }
 
 .name{
-    margin-left: 30px;
-    margin-top: 10px;
+    margin-left: 31%;
+    margin-top: 5.16%;
     font-family: 'roboto';
     width: 116px;
     height: 17px;
@@ -133,7 +133,7 @@
 }
 
 .dni{
-    margin-left: 30px;
+    margin-left: 28.33%;
     margin-top: 10px;
     width: 132px;
     height: 13px;
@@ -148,7 +148,7 @@
     color: #ffffff;
 }
 .year{
-    margin-left: 30px;
+    margin-left: 29.6%;
     margin-top: 10px;
     width: 121px;
     height: 13px;
@@ -188,10 +188,11 @@
     color: #ffffff;
     font-family: 'roboto'; 
     width: 70%;
+
 }
 
 .textBox:focus{
-   border-top:none;
+    border-top:none;
     border-left: none;
     border-right: none;
     border-bottom-color: #ffffff;
@@ -203,15 +204,23 @@
     outline:0px;    
 }
 
-/* label{
-    margin-left: 31px;
-    margin-top: 10px;
-} */
-
 .technology{
     margin-left: 31px;
     width: 30%;
     height: 14px;
+    font-family: 'roboto';
+    font-size: 18px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: 0.2px;
+    text-align: left;
+    color: #f8f8f8;
+}
+::placeholder{
+    width: 123px;
+    height: 19px;
     font-family: 'roboto';
     font-size: 18px;
     font-weight: 300;
