@@ -3,11 +3,15 @@
         <div class='row'>
             <div class="col-12">
                 <div v-if='aux'>
-                    <div v-bind:style="{ 'background-image': 'url(' + aux.cardPost.postImageUrl + ')' ,'width':'100%'  ,'height':'200px'}">
-                        <router-link v-bind:to="'/'">
+                    <!-- boton absolute img relative -->
+                    <!-- <div v-bind:style="{ 'background-image': 'url(' + aux.cardPost.postImageUrl + ')' ,'width':'100%'  ,'height':'200px'}"> -->
+                        
+                    <!-- </div> -->
+
+                    <img class='img' :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle" width="1200"  height="200">
+                    <router-link v-bind:to="'/'">
                             <label class='Go-back' >Go Back</label>
-                        </router-link>
-                    </div>
+                        </router-link> 
                 </div>
             </div>
         </div> 
@@ -22,12 +26,11 @@
                     <br/>
                     <br/>                    
                    <chartjs-doughnut :width="250" :height="250" :datasets='datasets' :option='option' ></chartjs-doughnut>                   
-                </div>       
+                </div>      
         </div>
     </div>
 </template>
 <script>
-
     export default{
         name: 'rmOneCArd',
 
@@ -90,14 +93,14 @@
     letter-spacing: 0.2px;  
     color: #ffffff;
     background-color:#020202;
-    /* padding-left: 2%;
-    padding-top:1%; */
+    position: absolute;
+    top:0%;
 }
 
 img{
      max-width: 100%;
    }
-
-
-
+.img{
+    position: relative;
+}
 </style>

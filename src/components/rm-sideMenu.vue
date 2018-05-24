@@ -73,7 +73,6 @@
     }
 </script>
 <style>
-
 .rmRadio input[type='radio']{
     display:none;
 }
@@ -91,7 +90,7 @@
     width: 50%;
 }
 
-.rmRadio label::before{
+.rmRadio label:before{
     content:'';
     width: 30px;
     height: 30px;
@@ -108,6 +107,7 @@
 }
 .background {
   height: calc(100vh - 60px);
+  width: 100%;
   background-color: #020202;
   color: white;
 }
@@ -118,7 +118,6 @@
 .name{
     margin-left: 30px;
     margin-top: 10px;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'roboto';
     width: 116px;
     height: 17px;
@@ -138,7 +137,6 @@
     margin-top: 10px;
     width: 132px;
     height: 13px;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'roboto';
     font-size: 18px;
     font-weight: 300;
@@ -162,7 +160,6 @@
     letter-spacing: 0.2px;
     text-align: left;
     color: #ffffff;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'roboto';
 }
 .filter-by{
@@ -179,7 +176,6 @@
     letter-spacing: 0.2px;
     text-align: left;
     color: #f8f8f8;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'roboto';
 }
 .textBox{ 
@@ -190,7 +186,7 @@
     background-color: #020202;
     margin-left:31px; 
     color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; 
+    font-family: 'roboto'; 
     width: 70%;
 }
 
@@ -202,22 +198,20 @@
     background-color: #020202;
     margin-left:31px; 
     color: #ffffff;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  */
     font-family: 'roboto';
     width: 70%;
     outline:0px;    
 }
 
-label{
+/* label{
     margin-left: 31px;
     margin-top: 10px;
-}
+} */
 
 .technology{
     margin-left: 31px;
     width: 30%;
     height: 14px;
-    /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif; */
     font-family: 'roboto';
     font-size: 18px;
     font-weight: 300;
