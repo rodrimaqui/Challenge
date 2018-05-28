@@ -7,14 +7,14 @@
     </header>
     <div class="conteiner-fluid">
       <div class="row">
-        <div class="col-xl-3 col-lg-2 col-md-3 col-sm-3 p-0 m-0">
+        <div class="col-xl-3 col-lg-4 p-0 m-0">
             <transition name="slide-fade">
             <div v-if='isMenuOpen'>
               <rmSideMenu />          
             </div>
           </transition>
         </div>
-        <div v-if='isMenuOpen' class="col-xl-9 col-lg-10 col-md-9 col-sm-9 sizeRow">
+        <div v-if='isMenuOpen' class="col-xl-9 col-lg-8 sizeRow">
              <transition name="slide-fade">
              <router-view/>
           </transition>

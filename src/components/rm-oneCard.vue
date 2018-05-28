@@ -3,7 +3,7 @@
         <div class='row'>
             <div class="col-12">
                 <div v-if='aux'>
-                    <img class='img' :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle" width="1200"  height="200">
+                    <img class='img' :src=aux.cardPost.postImageUrl :alt="aux.cardPost.postTitle">
                     <router-link v-bind:to="'/'">
                             <label class='Go-back' >Go Back</label>
                         </router-link> 
@@ -85,9 +85,12 @@
     color: #ffffff;
     background-color:#020202;
     position: absolute;
-    top:0%;
+    top:3%;
+    left:1.8%;
 }
 .img{
     position: relative;
+    width: 100%;
+    height: 200px;
 }
 </style>

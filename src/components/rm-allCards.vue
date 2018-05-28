@@ -2,7 +2,7 @@
     <div>
         <label class="LANGUAGES-TECHNOLOGIES">LANGUAGES & TECHNOLOGIES</label>
         <div class="card-columns">
-            <div v-for="(card,key) in getCards"  :key='card.id'>      
+            <div v-for="(card) in getCards" :key='card.id'>      
                 <rmCard  :card='card'/>
             </div>
         </div>
@@ -47,4 +47,5 @@
   color: #020202;
   color: var(--black-two);
 }
+
 </style>

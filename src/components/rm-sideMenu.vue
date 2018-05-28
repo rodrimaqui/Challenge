@@ -80,7 +80,7 @@
 .rmRadio label{
     color:#ffffff;
     background-color: #020202;
-    font-family: Roboto;
+    font-family: 'roboto';
     font-size: 18px;
     padding: 5px 15px 5px 51px;
     display: inline-block;
@@ -177,6 +177,7 @@
     text-align: left;
     color: #f8f8f8;
     font-family: 'roboto';
+    
 }
 .textBox{ 
     border-top:none;
@@ -232,4 +233,7 @@
     color: #f8f8f8;
 }
 
+label{
+    left: 5%;
+}
 </style>
