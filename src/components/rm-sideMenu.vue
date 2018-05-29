@@ -109,11 +109,11 @@
     display: inline-block;
     background: black;
     background-color: #ffffff;
-    border: 4px solid black;
+    border: 5px solid black;
     border-radius: 70%;
     position: absolute;
-    left:10.8%;
-    top: 23%;  
+    left:10.65%;
+    top: 20.8%;  
 }
 
 .rmRadio input[type='radio']:checked + label:before{
