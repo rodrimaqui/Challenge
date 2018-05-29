@@ -102,6 +102,20 @@
     left: 17px;
 }
 
+.rmRadio input[type='radio']:checked + label:after{
+    content:'';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background: black;
+    background-color: #ffffff;
+    border: 4px solid black;
+    border-radius: 70%;
+    position: absolute;
+    left:10.8%;
+    top: 23%;  
+}
+
 .rmRadio input[type='radio']:checked + label:before{
     background-color: #ffffff;
 }
